@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=latin-ext');
+
+:root {
+    --container-size: 20rem;
+    --top-space: 2.7rem;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 500px) {
+    * {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    * {
+        font-size: 15px;
+    }
+
+    .fa-user {
+        display: none;
+    }
+}
+
+body {
+    background-color: #132344;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.content {
+    width: var(--container-size);
+    margin: auto;
+    margin: 1px solid #222;
+}
+
+.container {
+    clear: both;
+    position: absolute;
+    top: var(--top-space);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    background-color:  #235f8a;
+    height: var(--container-size);
+    width: var(--container-size);
+}
+
+.containerB {
+    clear: both;
+    position: absolute;
+    top: var(--top-space);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    background-image: url('../img/city_first.png');
+    background-size:contain;
+    /*border: 1px solid #222;*/
+    height: var(--container-size);
+    width: var(--container-size); 
+}
+
+header {
+    margin-top: 0.8rem;
+    width: 20rem;
+    height: 2.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+nav {
+    width:100%;
+}
+
+nav ul {
+    list-style-type: none;
+
+}
+
+nav ul li {
+    background-color: #555;
+    float: left;
+    padding: 0.4rem 0.2rem;
+    color: whitesmoke;
+    width: 16.6%;
+    text-align: center;
+}
+
+nav ul li:hover {
+    background-color: #888;
+}
+
+#actualScore {
+    padding-left: 0.2rem;
+}
+
+.cell {
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: transparent;
+    grid-column: 1 span;
+    grid-row: 1 span;
+    position: relative;
+}
+
+.cellTop {
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: transparent;
+    grid-column: 1 span;
+    grid-row: 1 span;
+    position: relative;
+}
+
+
+/*The pop-up window of the notebook of the story*/
+
+.highlighted {
+    color: rgba(255,150,150,1);
+}
+
+
+.storyBox {
+    display: none;
+    position: fixed;
+    top: var(--top-space);
+    height: var(--container-size);
+    width: inherit;
+    z-index: 1;
+    overflow: auto;
+    background-color: #222;
+    background-image: url('../img/paperBg.jpg');
+}
+
+.info {
+    display: none;
+    position: fixed;
+    top: var(--top-space);
+    height: var(--container-size);
+    width: inherit;
+    z-index: 2;
+    overflow: auto;
+    background-color: #000;
+    opacity: 0.8;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.bigStart {
+    display: none;
+    position: absolute;
+    top: var(--top-space);
+    height: var(--container-size);
+    width: inherit;
+    z-index: 1;
+    overflow: auto;
+    background-color: #000;
+    opacity: 0.8;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+#startGame {
+    font-size: 14rem;
+    color: white;
+    margin: auto;
+}
+
+
+#storyTitle, #townStory {
+    padding: 0.4rem;
+    margin: 0 0.6rem;
+    font-family: 'Marck Script', cursive;
+    font-size: 0.8rem;
+    color: black;
+}
+
+.infoContainer {
+    margin: auto;
+    width: 80%;
+    padding: 5%;
+    background-color: #000;
+    color: white;
+}
+
+.infoContainer p {
+    padding: 0.32rem;
+    font-size: 0.72rem;
+}
+
+.startContainer {
+    margin: auto;
+    width: 80%;
+    padding: auto;
+    background-color: #000;
+    color: white;
+    border: 0;
+}
+
+.startContainer p {
+    padding: auto;
+    text-align: center;
+}
+
+/*define the place of the windows*/
+#cell1, #cell101 {
+    top: 1rem;
+}
+
+#cell2, #cell102 {
+    top: 2rem;
+}
+
+#cell3, #cell103 {
+    top: 0.8rem;
+    width: 2.8rem;
+    left: 1.2rem;
+}
+
+#cell4, #cell104 {
+    top: 1.2rem;
+    width: 2rem;
+}
+
+#cell5, #cell105 {
+    top: 0.8rem;
+    left: -1.2rem;
+}
+
+#cell6, #cell106 {
+    top: 4.4rem;
+    height: 3.2rem;
+}
+
+#cell7, #cell107 {
+    top: 3.6rem;
+    width: 2rem;
+    left: 2rem;
+    height: 2.8rem;
+}
+
+#cell8, #cell108 {
+    top: 3.12rem;
+    height: 3.2rem;
+    width: 3.2rem;
+    
+}
+
+#cell9, #cell109 {
+    top: 3.6rem;
+    height: 3.2rem;
+    width: 3.2rem;
+    left: -0.8rem;
+}
+
+#cell10, #cell110 {
+    top: 3.2rem;
+    left: -0.4rem;
+    width: 3.2rem;
+    left: 0.4rem;
+}
+
+#cell11, #cell111 {
+    top: 5.6rem;
+    width: 3.2rem;
+    height: 3.6rem;
+    left: 0.2rem;
+}
+
+#cell12, #cell112 {
+    top: 7rem;
+    width: 2.8rem;
+    height: 3.2rem;
+    left: 0.8rem;
+}
+
+
+#cell13, #cell113 {
+    top: 5.4rem;
+    width: 1.6rem;
+    height: 2.8rem;
+    left: 0.6rem;
+}
+
+#cell14, #cell114 {
+    top: 4.8rem;
+    left: -1.2rem;
+    height: 3.6rem;
+    width: 3.4rem;
+}
+
+#cell15, #cell115 {
+    top: 4.8rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    left: 0.6rem;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
