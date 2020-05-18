@@ -29,6 +29,7 @@
     }
 }
 
+
 body {
     background-color: #132344;
 }
@@ -147,11 +148,17 @@ nav ul li:hover {
     top: var(--top-space);
     height: var(--container-size);
     width: inherit;
-    z-index: 2;
     overflow: auto;
+    z-index: 2;
     background-color: #000;
     opacity: 0.8;
     font-family: 'PT Sans Narrow', sans-serif;
+}
+
+@media screen and (min-width: 500px){
+    .info {
+        overflow-y: hidden;
+    }
 }
 
 .bigStart {
@@ -192,6 +199,10 @@ nav ul li:hover {
 
 .infoContainer p {
     padding: 0.32rem;
+    font-size: 0.72rem;
+}
+
+.infoContainer strong, h3 {
     font-size: 0.72rem;
 }
 
