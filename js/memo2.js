@@ -141,8 +141,19 @@ const init = () => {
         storyPropagation++;
         if (storyArray[storyPropagation-1] !== undefined){
             storySoFar += storyArray[storyPropagation-1] + ' ';
-        }
-        console.log('Click counter: ', clickCounter);
+            if (storyArray[storyPropagation-1].toLowerCase() == 'a') {
+                storyPropagation++;
+                storySoFar += storyArray[storyPropagation-1] + ' ';
+            };
+            let storyLast = '';
+            for (i = 6; i >= 0; i--){
+                if (storyArray[storyPropagation-1-i]) storyLast += storyArray[storyPropagation-1-i] + ' ';
+            }; 
+            let storyLine = "<div class='newWords'>" + storyLast + "</div>";
+            console.log('storyLast', storyLast);
+            $(storyLine).insertAfter('.containerB');
+        };
+        console.log('!Click counter: ', clickCounter);
         changeDisplay();
         
     }
@@ -179,8 +190,6 @@ const init = () => {
             }
             storyButton.toggleClass('highlighted'); 
             startButton.toggleClass('disabled');
-
-    
         });
     }
     

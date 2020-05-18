@@ -181,7 +181,7 @@ nav ul li:hover {
 }
 
 
-#storyTitle, #townStory {
+#storyTitle, #townStory, .newWords {
     padding: 0.4rem;
     margin: 0 0.6rem;
     font-family: 'Marck Script', cursive;
@@ -318,4 +318,11 @@ nav ul li:hover {
     pointer-events: none;
     cursor: not-allowed;
 }
+
+.newWords {
+    margin: var(--container-size) 0 0 0;
+    background: rgb(236, 227, 175);
+}
+
+
 
