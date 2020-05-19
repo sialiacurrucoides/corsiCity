@@ -8,11 +8,11 @@ include 'headerMemo.php';
     <header>
         <nav>
             <ul>
-                <li><a href="#"  id="info"> <i class="fa fa-info-circle"></i></a></li>
-                <li id="story"><a href="#"><i class="fa fa-user-secret"></i><i class="fa fa-pencil-square-o"></i></a></li>
-                <li id="music"><a href="#"><i class="fa fa-music"></i></a></li>
-                <li  id="score"><a href="#"><i class="fa fa-user"></i><span id="actualScore"> </span></a></li>
-                <li  id="score"><a href="#"><i class="fa fa-trophy"></i><span id="best"> </span></a></li>
+                <a href="#"  id="info"><li><i class="fa fa-info-circle"></i></li></a>
+                <a href="#"><li id="story"><i class="fa fa-user-secret"></i><i class="fa fa-pencil-square-o"></i></li></a>
+                <a href="#"><li id="music"><i class="fa fa-music"></i></li></a>
+                <li  id="score"><i class="fa fa-user"></i><span id="actualScore"> </span></li>
+                <li  id="record"><i class="fa fa-trophy"></i><span id="best"> </span></li>
                 <li id="start"><a href="../../"><i class="fa fa-home"></i></a></li> <!-- back to the main page if it is nested -->
             </ul>
         </nav>
