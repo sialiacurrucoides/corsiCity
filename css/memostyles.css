@@ -322,7 +322,22 @@ nav ul li:hover {
 .newWords {
     margin: var(--container-size) 0 0 0;
     background: rgb(236, 227, 175);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.fa-remove {
+    background: rgba(214, 206, 159, 0.9);
+    border-radius: 4px;
+    padding: 0.3rem;
+    color: #333;
+    float: right;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
 
 

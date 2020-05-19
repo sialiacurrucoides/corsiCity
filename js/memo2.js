@@ -35,6 +35,7 @@ const init = () => {
     let storyArray = [];
     let madeError = 0;
     let bestScore = 0;
+    let toBeShownLineStory = true;
 
     $.get('./secretStory.txt',function(data){
         storyArray = data.split(' ');
@@ -146,12 +147,16 @@ const init = () => {
                 storySoFar += storyArray[storyPropagation-1] + ' ';
             };
             let storyLast = '';
-            for (i = 6; i >= 0; i--){
+            for (i = 5; i >= 0; i--){
                 if (storyArray[storyPropagation-1-i]) storyLast += storyArray[storyPropagation-1-i] + ' ';
             }; 
-            let storyLine = "<div class='newWords'>" + storyLast + "</div>";
-            console.log('storyLast', storyLast);
-            $(storyLine).insertAfter('.containerB');
+            let storyLine = "<div class='newWords'>" + storyLast + "<i class='fa fa-remove'></i></div>";
+            //insert the last decoded words below the city, but it should be dismissible
+            if (toBeShownLineStory) $(storyLine).insertAfter('.containerB');
+            $('.fa-remove').on('click', () => {
+                $('.newWords').addClass("hidden");
+                toBeShownLineStory = false;
+            });
         };
         console.log('!Click counter: ', clickCounter);
         changeDisplay();
