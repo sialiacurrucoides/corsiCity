@@ -13,7 +13,7 @@ include 'headerMemo.php';
                 <a href="#"><li id="music"><i class="fa fa-music"></i></li></a>
                 <li  id="score"><i class="fa fa-user"></i><span id="actualScore"> </span></li>
                 <li  id="record"><i class="fa fa-trophy"></i><span id="best"> </span></li>
-                <li id="start"><a href="../../"><i class="fa fa-home"></i></a></li> <!-- back to the main page if it is nested -->
+                <a href="../../"><li id="start"><i class="fa fa-home"></i></li></a> <!-- back to the main page if it is nested -->
             </ul>
         </nav>
     </header>
