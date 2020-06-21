@@ -8,7 +8,7 @@ include 'headerMemo.php';
     <header>
         <nav>
             <ul>
-                <a href="#"  id="info"><li><i class="fa fa-info-circle"></i></li></a>
+                <a href="#"><li   id="info" class="highlighted"><i class="fa fa-info-circle"></i></li></a>
                 <a href="#"><li id="story"><i class="fa fa-user-secret"></i><i class="fa fa-pencil-square-o"></i></li></a>
                 <a href="#"><li id="music"><i class="fa fa-music"></i></li></a>
                 <li  id="score"><i class="fa fa-user"></i><span id="actualScore"> </span></li>

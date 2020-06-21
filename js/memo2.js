@@ -137,14 +137,18 @@ const init = () => {
 
     }
 
-    function revealAWordFromTheStory() {
-        let newPiece = "";
+    function addAnElement(newPiece) {
         storySoFar += storyArray[storyPropagation - 1] + ' ';
         newPiece += storyArray[storyPropagation - 1] + ' ';
+        return newPiece;
+    }
+
+    function revealAWordFromTheStory() {
+        let newPiece = "";
+        newPiece = addAnElement(newPiece)
         if (storyArray[storyPropagation - 1].toLowerCase() == 'a') {
             storyPropagation++;
-            storySoFar += storyArray[storyPropagation - 1] + ' ';
-            newPiece += storyArray[storyPropagation - 1] + ' ';
+            newPiece = addAnElement(newPiece);
         };
         storyPropagation++;
         return newPiece;
@@ -213,10 +217,8 @@ const init = () => {
     function showInfo() {
         console.log('countInfo: ', countInfoShow);
         $('.info').toggle(400, function () {
-            countInfoShow++;
-            if (countInfoShow % 2 != 0) $('#townStory').text(storySoFar);
             infoButton.toggleClass('highlighted');
-            startButton.toggleClass('disabled');
+            //startButton.toggleClass('disabled');
         });
     }
 
