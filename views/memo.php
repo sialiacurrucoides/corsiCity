@@ -46,7 +46,7 @@ include 'headerMemo.php';
             <div class="infoContainer">
                 <h3>Útmutató</h3>
                 
-                <p>1. Indítsd a kört a <i class="fa fa-play-circle-o" style="font-size:24px"></i>-ra kattintva.</p>
+                <p>1. Indítsd a kört a nagy <i class="fa fa-play-circle-o" style="font-size:24px"></i>-ra kattintva, miután bezártad ezt az ablakot.</p>
                 <p>2. Figyeld meg a világító ablaktáblák sorrendjét.</p>
                 <p>3. Kattintással reporodukáld, amit láttál!</p>
                 <p>A <i class="fa fa-user-secret" style="font-size:24px"></i>-ra kattintva megnézheted, hogy a kémed mennyit fejtett már meg a történetből!</p>
